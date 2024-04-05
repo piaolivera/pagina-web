@@ -4,6 +4,62 @@
     box-sizing: border-box;
 }
 
+:root{
+    scroll-behavior:smooth ; /*Nos permite deslizar desde un clck del inicio hacia donde queramos ir, por ej. clickeamos a contactos y nos lleva en donde este el contacto*/
+}
+
 body{
     font-family: 'Open Sans', sans-serif;
 }
+.contenedor{
+    width:90% ;
+    max-width: 1200px;
+    overflow: hidden;
+   margin: auto;
+   padding: 60px 0;
+}
+header{
+    height: 100vh;
+    background-image: linear-gradient(to top, rgb(161,140,209, 0.5) 0%, rgba(251,194,235, 0.5) 100%), url(../img/ilusitracion-01.png);
+    background-repeat: no-repeat; /*no repetimos la imagen*/
+    background-size: cover; /*agrandamos la imagen para que ocupe toda la pamtalla*/
+    background-attachment: fixed;
+    background-position:center ;
+}
+.head{
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.hamburguer{
+    position: fixed; /*el menu queda fijo*/
+    top: 30px;
+    right: 30px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer; /*cada vez que el pursor se coloca encima, se pone la manito*/
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5); /*le agregamos una transparencia al rededor del menu*/
+}
+.menu-navegacion{
+    position: fixed;
+    top: 0;
+    right: 0; /*se posiciona a la derecha*/
+    width: 30vw;
+    height: 100%;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column; /*inicio, contacto, experto... se ponen uno abajo del otro*/
+    justify-content: space-evenly;
+    align-items: center;
+    transition: transform .3s ease-in-out;
+    transform: translate(110%);
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+
